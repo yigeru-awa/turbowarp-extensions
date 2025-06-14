@@ -1,5 +1,3 @@
-Scratch.vm.runtime 选项
-
 以下用 runtime 代替 Scratch.vm.runtime.
 
 函数&变量:
@@ -55,9 +53,11 @@ Scratch.vm.runtime 选项
     设置补帧:
     runtime.setInterpolation(enabled: boolean);
     设置帧数:
-    runtime.setFramerate(frame: number)
+    runtime.setFramerate(frame: number);
+    帧数:
+    runtime.frameLoop.framerate: number;
     高质量笔:
-    runtime.setUseHighQualityRender(enabled: boolean)
+    runtime.setUseHighQualityRender(enabled: boolean);
 
     调试:
     runtime.debug: boolean;
@@ -98,6 +98,6 @@ Scratch.vm.runtime 选项
 
 getters:
     舞台宽高:
-    STAGE_WIDTH: number, STAGE_HEIGHT: number
+    STAGE_WIDTH: number, STAGE_HEIGHT: number;
     初始克隆限制:
-    MAX_CLONES: number
+    MAX_CLONES: number;
