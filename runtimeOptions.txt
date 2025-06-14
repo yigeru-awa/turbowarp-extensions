@@ -57,6 +57,8 @@
     帧数:
     runtime.frameLoop.framerate: number;
     高质量笔:
+    Scratch.renderer.useHighQualityRender: boolean;
+    修改高质量笔:
     runtime.setUseHighQualityRender(enabled: boolean);
 
     调试:
