@@ -1,0 +1,103 @@
+Scratch.vm.runtime 选项
+
+以下用 runtime 代替 Scratch.vm.runtime.
+
+函数&变量:
+    运行绿旗:
+    runtime.greenFlag();
+    停止运行:
+    runtime.stopAll();
+    完全重置:
+    runtime.resetRunId();
+
+    获取指定名称的 sprite target:
+    runtime.getSpriteTargetByName(spriteName);
+    用 ID 获取 target:
+    runtime.getTargetById(targetId);
+
+    增加当前克隆数量:
+    runtime.changeCloneCounter(changeAmount);
+    当前克隆数量:
+    runtime._cloneCounter: number;
+    检测克隆是否小于最大克隆数量:
+    runtime.clonesAvailable();
+
+    运行选项:
+        克隆限制:
+        runtime.runtimeOptions.maxClones: number;
+        栅栏限制:
+        runtime.runtimeOptions.fencing: boolean;
+        其他限制:
+        runtime.runtimeOptions.miscLimits: boolean;
+        更新:
+        runtime.setRuntimeOptions(runtimeOptions: any);
+
+    编译选项:
+        可否使用:
+        runtime.compilerOptions.enabled: boolean;
+        循环计时器:
+        runtime.compilerOptions.warpTimer: boolean;
+        更新:
+        runtime.setCompilerOptions(compilerOptions: any);
+
+    舞台宽&高:
+    runtime.stageWidth: number;
+    runtime.stageHeight: number;
+    设置舞台大小:
+    runtime.setStageSize(width: number, height: number);
+
+    加速模式:
+    runtime.turboMode: boolean;
+    云变量限制:
+    runtime.cloudOptions.limit: number;
+    补帧:
+    runtime.interpolationEnabled: boolean;
+    设置补帧:
+    runtime.setInterpolation(enabled: boolean);
+    设置帧数:
+    runtime.setFramerate(frame: number)
+    高质量笔:
+    runtime.setUseHighQualityRender(enabled: boolean)
+
+    调试:
+    runtime.debug: boolean;
+    打开调试:
+    runtime.enableDebug();
+
+    寻找当前配置的注释:
+    runtime.findProjectOptionsComment();
+    根据注释加载配置:
+    runtime.parseProjectOptions();
+
+    寻找舞台 target:
+    runtime.getTargetForStage();
+    当前编辑 target:
+    runtime.getEditingTarget();
+    根据名字寻找 target:
+    runtime.getSpriteTargetByName(spriteName: string);
+    根据 ID 寻找 target:
+    runtime.getTargetById(targetId: string);
+
+    全部变量名:
+    runtime.getAllVarNamesOfType();
+    新建全局变量:
+    runtime.createNewGlobalVariable(variableName: string, optVarId: string, optVarType: string);
+    optVarType: default = Variable.SCALAR_TYPE
+
+    设置当前角色:
+    runtime.setEditingTarget(editingTarget: Target);
+
+    运行帽子:
+    runtime.startHats(requestedHatOpcode: string, optMatchFields: object, optTarget: Target);
+
+    根据 opcode 获取函数:
+    runtime.getOpcodeFunction(opcode: string);
+
+    获取舞台积木 JSON:
+    runtime.getBlocksJSON();
+
+getters:
+    舞台宽高:
+    STAGE_WIDTH: number, STAGE_HEIGHT: number
+    初始克隆限制:
+    MAX_CLONES: number
