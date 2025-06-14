@@ -103,3 +103,18 @@ getters:
     STAGE_WIDTH: number, STAGE_HEIGHT: number;
     初始克隆限制:
     MAX_CLONES: number;
+
+setRuntimeOptions(runtimeOptions):
+    runtimeOptions: dictionary.
+    
+    runtimeOptions:
+        {
+            fencing: boolean, // 栅栏限制
+            miscLimits: boolean, // 其他限制
+            maxClones: number, // 克隆限制
+        }
+
+设置用户名:
+Scratch.vm.postIOData("userData", {
+    username: string,
+});
