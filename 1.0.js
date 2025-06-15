@@ -2,10 +2,6 @@
     'use strict';
     const { ArgumentType, BlockType, Cast } = Scratch;
 
-    const sep = (gap) => ({
-        blockType: BlockType.XML,
-        xml: `<sep gap="${gap}"></sep>`
-    });
     const label = (text) => ({
         blockType: BlockType.LABEL,
         text: String(text)
